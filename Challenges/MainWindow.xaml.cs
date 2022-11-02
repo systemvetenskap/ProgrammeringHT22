@@ -27,6 +27,7 @@ namespace Challenges
 
         private void btnAddSubract_Click(object sender, RoutedEventArgs e)
         {
+            // https://edabit.com/challenge/s9tefkuARCqzT3vpo
             int expected = 24, x, y;
             string result="";
             x = 6;
