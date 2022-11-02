@@ -36,28 +36,29 @@ namespace FL3
 
             //if(villkor) // mitt villkor måste kunna valideras som sant eller falskt
 
-            //string personOne = "Erik Öberg", personTwo="Sara";
-            //if (personOne.Length < 8)
-            //{
-            //    if (personOne.Length > personTwo.Length)
-            //    {
-            //        // Den här koden körs om och endast om
-            //        // villkoret är sant
-            //        MessageBox.Show("Ditt namn är längst");
-            //    }
-            //    else if (personOne.Length == personTwo.Length)
-            //    {
-            //        MessageBox.Show("Era namn är lika långa");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Ditt namn är kortast");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ditt namn är för långt");
-            //}
+            string personOne = "Erik Öberg", personTwo = "Sara";
+            int nameLength = personOne.Length;
+            if (nameLength < 8)
+            {
+                if (personOne.Length > personTwo.Length)
+                {
+                    // Den här koden körs om och endast om
+                    // villkoret är sant
+                    MessageBox.Show("Ditt namn är längst");
+                }
+                else if (personOne.Length == personTwo.Length)
+                {
+                    MessageBox.Show("Era namn är lika långa");
+                }
+                else
+                {
+                    MessageBox.Show("Ditt namn är kortast");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ditt namn är för långt");
+            }
 
             /*    Har föraren hållit rätt hastighet?
              *    Är föraren nykter?

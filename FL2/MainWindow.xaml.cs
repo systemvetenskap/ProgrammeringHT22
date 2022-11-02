@@ -20,7 +20,7 @@ namespace FL2
     /// </summary>
     public partial class MainWindow : Window
     {
-        int myLuckyNumber = 4;
+        int myLuckyNumber = 4; // instansvariabel
         public MainWindow()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace FL2
             // tilldelar värde <---- görs från höger till vänster
             firstName += " Erik"; // utöka redan befintliga data i variabeln
 
-           lblResult.Content =  $"{firstName} {lastName}";
+           lblResult.Content =  $"{txtName.Text} {lastName}";
             firstName = "Johanna";
            txtName.Text =  $"{firstName} {lastName}";
 
