@@ -1,0 +1,59 @@
+Föreläsning 1
+Variabler av typen string
+
+https://www.w3schools.com/cs/cs_variables.php
+
+Alla variabler måste ha en datatyp i C#
+
+Syntax för att skapa en variabel
+datatyp  namn = värde;
+
+Man kan lägga till saker med +
+
+x = x + y
+Är samma sak som:
+x += y
+
+Föreläsning 2
+Datatypen int och double
+
+int = heltal
+double = decimaltal (flyttal)
+när du skriver decimaltal i koden måste du använda . (punkt) och inte kommatecken!
+
+https://www.w3schools.com/cs/cs_data_types.php
+
+inbyggda datatyper i C#:
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
+
+viktigaste:
+string
+int
+double
+char
+bool
+
+När man jobbar med tal (numeriska operander) kan du använda operatorer
+https://learn.microsoft.com/sv-se/bonsai/inkling/operators/arithmetic
+
++, -, *, /
+
+även resten (modulo) =% Kommer förklara detta mer i kommande föreläsningar.
+
+
+
+
+Föreläsning 3
+Styrande satser
+if-satser
+else-if
+else
+
+https://www.tutorialsteacher.com/csharp/csharp-if-else
+https://www.w3schools.com/cs/cs_conditions.php
+https://www.c-sharpcorner.com/article/c-sharp-if-else-statement/
+
+
+Jämförelseoperander
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators
+https://learn.microsoft.com/sv-se/bonsai/inkling/operators/comparison
