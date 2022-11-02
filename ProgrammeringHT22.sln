@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Anteckningar.txt = Anteckningar.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FL3", "FL3\FL3.csproj", "{6EC42509-B354-49D4-869C-1CC6E2547F10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{C03C0FFC-3F91-4F49-A2F6-518933AA1C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03C0FFC-3F91-4F49-A2F6-518933AA1C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03C0FFC-3F91-4F49-A2F6-518933AA1C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC42509-B354-49D4-869C-1CC6E2547F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC42509-B354-49D4-869C-1CC6E2547F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC42509-B354-49D4-869C-1CC6E2547F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC42509-B354-49D4-869C-1CC6E2547F10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
