@@ -14,6 +14,11 @@ x = x + y
 Är samma sak som:
 x += y
 
+
+
+
+
+
 Föreläsning 2
 Datatypen int och double
 
@@ -31,7 +36,7 @@ string
 int
 double
 char
-bool
+bool = sant eller falsk true eller false
 
 När man jobbar med tal (numeriska operander) kan du använda operatorer
 https://learn.microsoft.com/sv-se/bonsai/inkling/operators/arithmetic
@@ -48,6 +53,12 @@ Styrande satser
 if-satser
 else-if
 else
+
+
+En ifsats kan nästlas
+Alltså, läggas inuti varandra
+
+Flera logiska uttryck kan kombineras med && samt ||
 
 https://www.tutorialsteacher.com/csharp/csharp-if-else
 https://www.w3schools.com/cs/cs_conditions.php

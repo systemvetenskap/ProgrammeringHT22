@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel Margin="50,53,30,27">
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="53" Width="105" Click="btnOk_Click"/>
+        <TextBlock x:Name="txtResult" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <TextBlock x:Name="txtResult2" Text="En ny text" />
+        </StackPanel>
     </Grid>
 </Window>
