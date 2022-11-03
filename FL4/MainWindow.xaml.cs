@@ -58,6 +58,8 @@ namespace FL4
             string name = "Erik";
             // ['E']['r']['i']['k']
             char letter = 'A';
+            MessageBox.Show(letter.ToString());
+
             char myFirstLetter = name[1];
 
             string[] fruits = {"banan", "citron", "kiwi", "melon"};
@@ -101,6 +103,15 @@ namespace FL4
 
             }
 
+
+            // datatypen? var
+
+            // var är en slasktratt som själv avgör datatypen av en variabel
+            // kamelont
+            // använd inte den för att du måste veta hur man jobbar med datatyper
+
+            double antal = 0;
+            var antal2 = 0.8;
         }
     }
 }
