@@ -43,7 +43,7 @@ https://learn.microsoft.com/sv-se/bonsai/inkling/operators/arithmetic
 
 +, -, *, /
 
-även resten (modulo) =% Kommer förklara detta mer i kommande föreläsningar.
+även resten (modulo) = % Kommer förklara detta mer i kommande föreläsningar.
 
 
 
@@ -68,3 +68,11 @@ https://www.c-sharpcorner.com/article/c-sharp-if-else-statement/
 Jämförelseoperander
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators
 https://learn.microsoft.com/sv-se/bonsai/inkling/operators/comparison
+
+Föreläsning 4
+Arrayer
+
+När en variabel kan ha flera värden av samma sort
+
+Om du vill titta på alla värden. Använd en loop
+
