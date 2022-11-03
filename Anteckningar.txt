@@ -14,7 +14,7 @@ x = x + y
 Är samma sak som:
 x += y
 
-
+******************************
 
 
 
@@ -46,7 +46,7 @@ https://learn.microsoft.com/sv-se/bonsai/inkling/operators/arithmetic
 även resten (modulo) = % Kommer förklara detta mer i kommande föreläsningar.
 
 
-
+******************************
 
 Föreläsning 3
 Styrande satser
@@ -69,10 +69,43 @@ Jämförelseoperander
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators
 https://learn.microsoft.com/sv-se/bonsai/inkling/operators/comparison
 
+
+
+******************************
+
 Föreläsning 4
 Arrayer
+https://www.w3schools.com/cs/cs_arrays.php
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/
+https://www.tutorialsteacher.com/csharp/array-csharp
 
 När en variabel kan ha flera värden av samma sort
+Deklareras genom att sätta [] efter datatypen
+int[] minaTal;
+string[] minaSträngar;
+double[] minaDecimaltal;
+
+För att de ska fungera måste du skapa ett objekt samt säga hur många fack du ska ha.
+minaTal = new int[4]; 
+
+
 
 Om du vill titta på alla värden. Använd en loop
 
+Ska du enbart titta på alla värden? Då är Foreach smart
+
+string[] fruits = {"banan", "citron", "kiwi", "melon"};
+
+foreach (string fruit in fruits)
+{
+    MessageBox.Show(fruit);
+}
+
+Ibland behöver du dock ändra värden i loopen, eller kanske ta den baklänges. Då är for-loopen bra.
+
+https://www.w3schools.com/cs/cs_for_loop.php
+
+for (int i = 0; i < fruits.Length; i += 2)
+{
+    MessageBox.Show(fruits[i]);
+}
