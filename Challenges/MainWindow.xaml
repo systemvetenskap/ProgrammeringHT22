@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="btnAddSubract" Content="Add subract multiply" HorizontalAlignment="Left" Margin="57,122,0,0" VerticalAlignment="Top" Height="71" Width="243" Click="btnAddSubract_Click"/>
+        <Button x:Name="btnConvertMonth" Content="Convert month" HorizontalAlignment="Left" Margin="400,122,0,0" VerticalAlignment="Top" Height="70" Width="194" Click="btnConvertMonth_Click"/>
 
     </Grid>
 </Window>

@@ -55,5 +55,47 @@ namespace Challenges
 
             MessageBox.Show(result);
         }
+
+        private void btnConvertMonth_Click(object sender, RoutedEventArgs e)
+        {
+            string month = GetMonthName(2);
+        }
+
+        private string GetMonthName(int monthNumber)
+        {
+            //if (monthNumber == 1)
+            //{
+            //    return "Januari";
+            //}
+
+            //if(monthNumber == 2)
+            //{
+            //    return "Februari";
+            //}
+            //return "Hittade ingen månad.";
+
+            // case switch!
+
+            // eftersom varje månad alltid har ett fast värde på månadens nummer
+            // konstanta värden
+            string month;
+            switch (monthNumber)
+            {
+                case 1:
+                    month =  "Januari";
+                    // många rader kod
+                    //
+
+                    //
+                    break;
+                case 2:
+                    month =  "Februari";
+                    break;
+                default:
+                    month =  "Hittade ingen månad.";
+                    break;
+            }
+            return month;
+        }
     }
 }

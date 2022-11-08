@@ -109,3 +109,46 @@ for (int i = 0; i < fruits.Length; i += 2)
 {
     MessageBox.Show(fruits[i]);
 }
+
+
+******************************
+
+Föreläsning 5
+Metoder
+https://www.w3schools.com/cs/cs_methods.php
+https://www.geeksforgeeks.org/c-sharp-methods/
+
+DRY -> Don't repeat yourself
+En metod ska ha en uppgift att lösa. Inte flera olika
+
+Lösningen ligger ofta i att skapa metoder
+
+En metod är något som vi gör
+en egenskap är något som beskriver hur jag är
+
+
+en variabel:
+datatyp variabelnamn plus eventuellt startvärde
+
+int number = 0;
+
+En metod skapas på ungefär liknande sätt
+
+accessor returvärde (datatyp) metodnamn (noll, en eller flera parametrar)
+
+returvärde kan vara void = ingenting returneras
+annars returneras en datatyp likt int, double, bool osv
+
+En metod kan ha oändligt med indataparametrar.
+
+En metod kan överlagras. Det betyder att du kan ha flera olika varianter av metoden. För att detta ska fungera måste den ha olika
+indata, eller utdata
+
+Om du vill bryta en metod, använd return.
+Return bryter även en loop.
+
+Switch Case
+Om en if-sats har många kontrollpunkter och de baseras på konstanta värden. Då kan CASE vara snyggar och mer lättläst
+https://www.w3schools.com/cs/cs_switch.php
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements
+https://www.tutorialsteacher.com/csharp/csharp-switch

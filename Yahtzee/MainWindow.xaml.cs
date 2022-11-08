@@ -76,23 +76,46 @@ namespace Yahtzee
                 //total = ones + twos+ threes + fours + fives + sixes;
 
                 // varför inte använda en array och en loop?
+                total = GetTotalSum(sums);
+                total += GetBonusPoints(total);
+                
 
-                foreach (int sum in sums)
-                {
-                    total += sum;
-                }
-
-                if (total >= 5)
-                {
-                    txtBonus.Text="50";
-                    total += 50;
-                }
+                
             }
 
 
             txtTotal.Text = total.ToString();
 
 
+        }
+
+        private int GetBonusPoints(int score)
+        {
+            // ternary
+            // condition ? consequent : alternative
+            int bonusPoint;
+            if (score >= 72 )
+            {
+                bonusPoint=50;
+            }
+            else
+            {
+                bonusPoint=0;
+            }
+
+
+            return score >= 72 ? 50 : 0;
+
+        }
+
+        private int GetTotalSum(int[] sums)
+        {
+            int total = 0;  
+            foreach (int sum in sums)
+            {
+                total += sum;
+            }
+            return total;
         }
     }
 }
