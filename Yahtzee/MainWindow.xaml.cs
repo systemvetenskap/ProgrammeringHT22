@@ -20,13 +20,34 @@ namespace Yahtzee
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly static Random random = new Random(); // en slumpgenerator
+        int numberOfDice;
+        int[] dice;
+        // den här koden begriper jag dåligt, men använder den ändå :)
         public MainWindow()
         {
             InitializeComponent();
+            numberOfDice = 5;
+            dice = new int[numberOfDice];
         }
 
         private void btnSum_Click(object sender, RoutedEventArgs e)
         {
+
+
+            bool[] savedDice = new bool[numberOfDice];
+            
+            RollDice(savedDice);
+
+            savedDice[0] = true;
+            savedDice[1] = true;
+
+            RollDice(savedDice);
+
+
+
+            lstValues.ItemsSource = dice;
+
             int ones, twos, threes, fours=0, fives=0, sixes=0, total=0;
             bool isConvertedCorrect;
             int[] sums = new int[6];
@@ -34,23 +55,23 @@ namespace Yahtzee
              // todo: Se till att värdena istället kontrollers i varje ruta, inte på knappen
             // return
             // null
-            if (string.IsNullOrEmpty(txtThrees.Text))
-            {
-                MessageBox.Show("Fel värde");
+            //if (string.IsNullOrEmpty(txtThrees.Text))
+            //{
+            //    MessageBox.Show("Fel värde");
 
-                return;
-            }
+            //    return;
+            //}
 
             ones =int.Parse(txtOnes.Text);
             twos=int.Parse(txtTwos.Text);
 
             isConvertedCorrect = int.TryParse(txtThrees.Text, out threes);
 
-            if (!isConvertedCorrect)
-            {
-                MessageBox.Show("Fel värde");
-            }
+            int[] dieSum = GetDieSums(dice);
 
+
+            
+            
 
             //  Hur kan vi kontrollera att användaren har matat in rimliga värden????
 
@@ -116,6 +137,55 @@ namespace Yahtzee
                 total += sum;
             }
             return total;
+        }
+
+        private int GetTotalSum(int[] sums, int eye)
+        {
+            int total = 0;
+            foreach (int sum in sums)
+            {
+                if (sum == eye)
+                {
+                    total += sum;
+                }
+            }
+            return total;
+        }
+
+        private int[] GetDieSums(int[] dice)
+        {
+            int eyes = 6;
+            int[] dieSum = new int[eyes];
+            for (int eye = 1; eye <= eyes; eye++)
+            {
+                dieSum[eye - 1] = GetTotalSum(dice, eye);
+            }
+            return dieSum;
+        }
+
+        private int RollDie()
+        {
+            return random.Next(1, 7); // Ger ett värde mellan 1 och 6 (exlusive upper bound)
+        }
+
+        private void RollDice(bool[] savedDice)
+        {
+            //  0     1       2       3      4
+            // [1]   [2]     [2]     [1]    [6]
+            // [true][true][false][false][false]
+            
+            for (int i = 0; i < dice.Length; i++)
+            {
+                if (!savedDice[i])
+                {
+                    dice[i] = RollDie();
+                }
+            }
+        }
+
+        private void txtOnes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int value = int.Parse( txtOnes.Text);
         }
     }
 }

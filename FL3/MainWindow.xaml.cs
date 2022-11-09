@@ -35,7 +35,7 @@ namespace FL3
             // villkor
 
             //if(villkor) // mitt villkor måste kunna valideras som sant eller falskt
-
+            bool withAdult = false;
             string personOne = "Erik Öberg", personTwo = "Sara";
             int nameLength = personOne.Length;
             if (nameLength < 8)

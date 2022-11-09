@@ -40,8 +40,8 @@ namespace FL5
 
             string secretMessage = "hej jag är glad idag";
 
-            onlyEvenNumbers = HasEvenNumbers(myOtherNumbers);
-            onlyOddNumbers = HasOddNumbers(myOtherNumbers);
+            onlyEvenNumbers = HasEvenNumbers(myNumbers);
+            onlyOddNumbers = HasOddNumbers(myNumbers);
             bool mixedNumbers = HasMixedNumbers(myNumbers);
 
             //DisplayMessage(secretMessage);
@@ -138,6 +138,7 @@ namespace FL5
 
         private bool HasOddNumbers(int[] numbers)
         {
+            bool oddNumbers = false;
             return !HasEvenNumbers(numbers);
         }
 
