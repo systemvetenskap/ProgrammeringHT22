@@ -31,97 +31,35 @@ namespace Yahtzee
             dice = new int[numberOfDice];
         }
 
-        private void btnSum_Click(object sender, RoutedEventArgs e)
+
+        private void DisplayDice()
         {
-
-
-            bool[] savedDice = new bool[numberOfDice];
-            
-            RollDice(savedDice);
-
-            savedDice[0] = true;
-            savedDice[1] = true;
-
-            RollDice(savedDice);
-
-
-
-            lstValues.ItemsSource = dice;
-
-            int ones, twos, threes, fours=0, fives=0, sixes=0, total=0;
-            bool isConvertedCorrect;
-            int[] sums = new int[6];
-
-             // todo: Se till att värdena istället kontrollers i varje ruta, inte på knappen
-            // return
-            // null
-            //if (string.IsNullOrEmpty(txtThrees.Text))
-            //{
-            //    MessageBox.Show("Fel värde");
-
-            //    return;
-            //}
-
-            ones =int.Parse(txtOnes.Text);
-            twos=int.Parse(txtTwos.Text);
-
-            isConvertedCorrect = int.TryParse(txtThrees.Text, out threes);
-
-            int[] dieSum = GetDieSums(dice);
-
-
-            
-            
-
-            //  Hur kan vi kontrollera att användaren har matat in rimliga värden????
-
-            // Ett tänkbart sätt kan vara att titta på rimliga summor
-
-            if(twos==2 || twos==4 || twos==6 || twos==8)
-            {
-
-            }
-
-            if (twos >=2 && twos<=10)
-            {
-
-            }
-            // Dela med 2?
-            if (twos % 2 != 0)
-            {
-                // Felaktiga värden
-                MessageBox.Show("Nu blev det tokigt");
-            }
-            else
-            {
-                //total = ones + twos+ threes + fours + fives + sixes;
-
-                // varför inte använda en array och en loop?
-                total = GetTotalSum(sums);
-                total += GetBonusPoints(total);
-                
-
-                
-            }
-
-
-            txtTotal.Text = total.ToString();
-
-
+            dieOne.Content = dice[0];
+            dieTwo.Content = dice[1];
+            dieThree.Content = dice[2];
+            dieFour.Content = dice[3];
+            dieFive.Content = dice[4];
         }
 
+        private void btnSum_Click(object sender, RoutedEventArgs e)
+        {
+            bool[] savedDice = { (bool)chkOne.IsChecked, (bool)chkTwo.IsChecked, (bool)chkThree.IsChecked, (bool)chkFour.IsChecked, (bool)chkFive.IsChecked };
+            RollDice(savedDice);
+            txtTotal.Text = GetTotalSum(3).ToString();
+        }
+        #region Summerar tärningar
         private int GetBonusPoints(int score)
         {
             // ternary
             // condition ? consequent : alternative
             int bonusPoint;
-            if (score >= 72 )
+            if (score >= 72)
             {
-                bonusPoint=50;
+                bonusPoint = 50;
             }
             else
             {
-                bonusPoint=0;
+                bonusPoint = 0;
             }
 
 
@@ -131,7 +69,7 @@ namespace Yahtzee
 
         private int GetTotalSum(int[] sums)
         {
-            int total = 0;  
+            int total = 0;
             foreach (int sum in sums)
             {
                 total += sum;
@@ -139,10 +77,10 @@ namespace Yahtzee
             return total;
         }
 
-        private int GetTotalSum(int[] sums, int eye)
+        private int GetTotalSum(int eye)
         {
             int total = 0;
-            foreach (int sum in sums)
+            foreach (int sum in dice)
             {
                 if (sum == eye)
                 {
@@ -152,17 +90,19 @@ namespace Yahtzee
             return total;
         }
 
-        private int[] GetDieSums(int[] dice)
+        private int[] GetDieSums()
         {
             int eyes = 6;
             int[] dieSum = new int[eyes];
             for (int eye = 1; eye <= eyes; eye++)
             {
-                dieSum[eye - 1] = GetTotalSum(dice, eye);
+                dieSum[eye - 1] = GetTotalSum(eye);
             }
             return dieSum;
         }
+        #endregion
 
+        #region Kasta tärningar
         private int RollDie()
         {
             return random.Next(1, 7); // Ger ett värde mellan 1 och 6 (exlusive upper bound)
@@ -173,7 +113,7 @@ namespace Yahtzee
             //  0     1       2       3      4
             // [1]   [2]     [2]     [1]    [6]
             // [true][true][false][false][false]
-            
+
             for (int i = 0; i < dice.Length; i++)
             {
                 if (!savedDice[i])
@@ -181,11 +121,17 @@ namespace Yahtzee
                     dice[i] = RollDie();
                 }
             }
+
+            DisplayDice();
+
         }
+        #endregion
+
 
         private void txtOnes_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int value = int.Parse( txtOnes.Text);
+            //int value = int.Parse(txtOnes.Text);
+            txtTotal.Text = GetTotalSum(1).ToString();
         }
     }
 }

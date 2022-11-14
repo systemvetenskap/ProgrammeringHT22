@@ -9,6 +9,9 @@
     <Grid>
         <Button x:Name="btnAddSubract" Content="Add subract multiply" HorizontalAlignment="Left" Margin="57,122,0,0" VerticalAlignment="Top" Height="71" Width="243" Click="btnAddSubract_Click"/>
         <Button x:Name="btnConvertMonth" Content="Convert month" HorizontalAlignment="Left" Margin="400,122,0,0" VerticalAlignment="Top" Height="70" Width="194" Click="btnConvertMonth_Click"/>
+        <Button x:Name="btnShuffleName" Content="Shuffle the name" HorizontalAlignment="Left" Margin="57,289,0,0" VerticalAlignment="Top" Height="90" Width="220" Click="btnShuffleName_Click"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="76,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnArr" Content="Sortera array" HorizontalAlignment="Left" Margin="387,289,0,0" VerticalAlignment="Top" Height="90" Width="220" Click="btnArr_Click"/>
 
     </Grid>
 </Window>

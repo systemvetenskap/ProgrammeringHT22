@@ -5,48 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yahtzee"
         mc:Ignorable="d"
-        Title="Yatzy" Height="900" Width="500">
-    <Grid Height="450" Margin="20,20,20,0" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+        Title="Yatzy" Height="900" Width="800">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="150" />
-        </Grid.RowDefinitions>
-        <Label FontSize="25" x:Name="captionOnes" Content="Ettor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="0" Grid.Column="0"/>
-        <TextBox  FontSize="25" x:Name="txtOnes" Text="0" TextAlignment="Center"  HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Grid.Row="0" Grid.Column="1" TextChanged="txtOnes_TextChanged"/>
+        <Grid Height="450" Margin="20,20,20,0" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <Label FontSize="25" x:Name="captionOnes" Content="Ettor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="0" Grid.Column="0"/>
+            <TextBox  FontSize="25" x:Name="txtOnes" TextAlignment="Center"  HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" Grid.Row="0" Grid.Column="1" TextChanged="txtOnes_TextChanged"/>
 
-        <Label x:Name="captionTwos"  FontSize="25" Content="Tvåor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="1" Grid.Column="0"/>
-        <TextBox x:Name="txtTwos"  Text="0" FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="captionTwos"  FontSize="25" Content="Tvåor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="1" Grid.Column="0"/>
+            <TextBox x:Name="txtTwos"  Text="0" FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="1" Grid.Column="1"/>
 
-        <Label x:Name="captionThrees"  FontSize="25" Content="Treor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="2" Grid.Column="0"/>
-        <TextBox x:Name="txtThrees"   FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="2" Grid.Column="1" />
+            <Label x:Name="captionThrees"  FontSize="25" Content="Treor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="2" Grid.Column="0"/>
+            <TextBox x:Name="txtThrees"   FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="2" Grid.Column="1" />
 
-        <Label x:Name="captionFours" FontSize="25" Content="Fyror" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="3" Grid.Column="0"/>
-        <TextBox x:Name="txtFours"   FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="46"  Grid.Row="3" Grid.Column="1"/>
+            <Label x:Name="captionFours" FontSize="25" Content="Fyror" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="3" Grid.Column="0"/>
+            <TextBox x:Name="txtFours"   FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="46"  Grid.Row="3" Grid.Column="1"/>
 
-        <Label x:Name="captionFives" FontSize="25" Content="Femmor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="4" Grid.Column="0"/>
-        <TextBox x:Name="txtFives"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="4" Grid.Column="1"/>
+            <Label x:Name="captionFives" FontSize="25" Content="Femmor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="4" Grid.Column="0"/>
+            <TextBox x:Name="txtFives"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="4" Grid.Column="1"/>
 
-        <Label x:Name="captionSixes" FontSize="25" Content="Sexor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="5" Grid.Column="0"/>
-        <TextBox x:Name="txtSixes"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="5" Grid.Column="1"/>
+            <Label x:Name="captionSixes" FontSize="25" Content="Sexor" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96"  Grid.Row="5" Grid.Column="0"/>
+            <TextBox x:Name="txtSixes"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="5" Grid.Column="1"/>
 
-        <Label x:Name="captionBonus" FontSize="25" Content="Bonus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96" FontWeight="Bold"  Grid.Row="6" Grid.Column="0"/>
-        <TextBox x:Name="txtBonus"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="6" Grid.Column="1"/>
+            <Label x:Name="captionBonus" FontSize="25" Content="Bonus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96" FontWeight="Bold"  Grid.Row="6" Grid.Column="0"/>
+            <TextBox x:Name="txtBonus"  FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"  Grid.Row="6" Grid.Column="1"/>
 
-        <Label x:Name="captionTotal" FontSize="25" Content="Total" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96" FontWeight="Bold"  Grid.Row="7" Grid.Column="0"/>
-        <TextBox x:Name="txtTotal" FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"  Grid.Row="7" Grid.Column="1"/>
-        <Button x:Name="btnSum" Content="Summera" Width="100" Grid.Column="2" Grid.Row="7" Margin="15, 5, 5, 10" Click="btnSum_Click"/>
-        <ListBox x:Name="lstValues" Grid.Row="8" Grid.Column="2" Height="150" />
+            <Label x:Name="captionTotal" FontSize="25" Content="Total" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFFF4E96" FontWeight="Bold"  Grid.Row="7" Grid.Column="0"/>
+            <TextBox x:Name="txtTotal" FontSize="25" TextAlignment="Center" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"  Grid.Row="7" Grid.Column="1"/>
+            <Button x:Name="btnSum" Content="Summera" Width="100" Grid.Column="2" Grid.Row="7" Margin="15, 5, 5, 10" Click="btnSum_Click"/>
+            <ListBox x:Name="lstValues" Grid.Row="8" Grid.Column="2" Height="150" />
+        </Grid>
+        <WrapPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="top" Width="400" Orientation="Horizontal" Grid.Column="2">
+            <CheckBox x:Name="chkOne"/>
+            <Label x:Name="dieOne" Content="X" FontSize="72" Margin="0,0,5,0"/>
+           
+            <CheckBox x:Name="chkTwo"/>
+            <Label x:Name="dieTwo" Content="X" FontSize="72" Margin="0,0,5,0"/>
+
+            <CheckBox x:Name="chkThree" />
+            <Label x:Name="dieThree" Content="X" FontSize="72" Margin="0,0,5,0"/>
+            
+            <CheckBox x:Name="chkFour" />
+            <Label x:Name="dieFour" Content="X" FontSize="72" Margin="0,0,5,0"/>
+            
+            <CheckBox x:Name="chkFive" />
+            <Label x:Name="dieFive" Content="X" FontSize="72"  Margin="0,0,5,0"/>
+        </WrapPanel>
+        <WrapPanel HorizontalAlignment="Left">
+        </WrapPanel>
     </Grid>
 </Window>
