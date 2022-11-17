@@ -30,6 +30,8 @@ namespace Challenges
         {
             // https://edabit.com/challenge/s9tefkuARCqzT3vpo
             int expected = 24, x, y;
+
+            string test = expected.ToString();
             string result="";
             x = 6;
             y=4;
