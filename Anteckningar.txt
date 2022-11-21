@@ -152,3 +152,29 @@ Om en if-sats har många kontrollpunkter och de baseras på konstanta värden. Då k
 https://www.w3schools.com/cs/cs_switch.php
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements
 https://www.tutorialsteacher.com/csharp/csharp-switch
+
+
+Objektorientering
+
+Centralt är klasser och objekt (kallas även instans).
+
+Klass är en mall
+
+Klass är en ritning
+
+Klasserna kan ha egenskaper Properties
+
+En property har en getter och eller en setter
+Dessa möjliggör att värden kan ändras, eller förhindra att det ändras.
+
+ALLT kokar ner till något som kallas inkapsling.
+
+En setter är när man tilldelar värden
+och en getter är när man hämtar värden
+
+Objekt kan även ha metoder. 
+
+När man skriver NEW skapas ett nytt objekt från klassen. Då körs vår konstruktor. 
+Den används alltså bara en och endast en gång
+
+En klass kan ha relation till andra klasser

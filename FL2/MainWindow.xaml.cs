@@ -76,7 +76,6 @@ namespace FL2
             int ageInYears, daysPerYear=365, totalDaysLived;
             double totalWeeksLived, daysInWeek;
 
-
             // tilldela värde
             //ageInYears = int.Parse(txtName.Text);
             //totalDaysLived = ageInYears * daysPerYear;
