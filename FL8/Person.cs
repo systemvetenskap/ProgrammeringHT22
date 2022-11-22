@@ -42,7 +42,8 @@ namespace FL8
         internal Person(string name, string address)
         {
             Name=name;
-            Address=address;    
+            Address=address;   
+            ChangeName("Sigvard");
         }   
 
         /// <summary>
