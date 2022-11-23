@@ -22,6 +22,7 @@ namespace FL9
         // magin ligger i ordet virtual
         public virtual double Area()
         {
+            // tvåtusen kodrader
             return Width * Height;
         }
 

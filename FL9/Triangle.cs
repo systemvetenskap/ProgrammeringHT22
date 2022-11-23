@@ -16,6 +16,7 @@ namespace FL9
 
         public override double Area()
         {
+            // 2500 rader kod
             return (Width * Height) /  2.0;
         }
 

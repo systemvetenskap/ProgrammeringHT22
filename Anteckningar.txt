@@ -178,3 +178,18 @@ När man skriver NEW skapas ett nytt objekt från klassen. Då körs vår konstruktor
 Den används alltså bara en och endast en gång
 
 En klass kan ha relation till andra klasser
+
+
+
+FL 10
+
+Fokus på ÄR och HAR
+
+ÄR = arv
+HAR = relation
+--> har relation till noll, en eller flera objekt/klasser LISTA
+--> har relation till noll eller en enda klass => property
+
+om man jobbar med objekt, så kan dessa ha olika värden på sina egenskaper
+
+MEN de har alla samma egenskap,  typ antalBen

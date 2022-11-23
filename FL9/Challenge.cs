@@ -9,12 +9,11 @@ namespace FL9
     public class Challenge
     {
         // Nu vill vi ha godtyckligt antal figurer
-        public List<Shape> Shapes { get; set; }
+        public List<Shape> Shapes { get; set; } =  new List<Shape>();
         public string Name { get;  }
         public Challenge(string name)
         {
             Name = name;
-            Shapes = new List<Shape>();
         }
 
         public double Area()
