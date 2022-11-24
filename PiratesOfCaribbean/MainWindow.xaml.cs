@@ -46,8 +46,21 @@ namespace PiratesOfCaribbean
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Pirate jack = new Pirate("Jack Sparrow", 1731);
+            Pirate jack = new Pirate("Jack Sparrow", 1732);
+            Pirate jack2 = new Pirate("Jack Sparrow", 1731);
+            Pirate jack3 = new Pirate("Jack Sparrow", 1728);
+
+
+
+
+
+            Pirate jack4 = new Pirate("Jack Sparrow", 1722);
             Pirate nellie = new Pirate("One-Leg Nellie", 1729, "Moonlight");
+
+
+
+
+
 
 
             List<Pirate> selectedPirates =  tortuga.GetPiratesByLevel(10, 1);
